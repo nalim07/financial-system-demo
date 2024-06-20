@@ -1,7 +1,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center text-muted">
-                All Rights Reserved by GIS. Designed and Developed by <a href="https://gmels.eduhybrid.id">GIS</a>.
+                Designed and Developed by <a href="https://gmels.eduhybrid.id">GIS</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

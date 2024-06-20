@@ -190,7 +190,7 @@ include 'templates/navbar.php';
                                         <td>L</td>
                                         <td>1</td>
                                         <td>
-                                            <button class="btn btn-primary">Detail</button>
+                                            <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                         </td>
                                     </tr>
                                     <tr>

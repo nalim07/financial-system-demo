@@ -17,10 +17,10 @@
                                 aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span
                                     class="hide-menu">Siswa</span></a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo $main_url; ?>tagihan.php"
                                 aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span
                                     class="hide-menu">Tagihan</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <!-- <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
                                             class="hide-menu"> SPP
                                         </span></a>
@@ -44,7 +44,7 @@
                                             Graduation
                                         </span></a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span

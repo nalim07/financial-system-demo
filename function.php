@@ -1,3 +1,3 @@
 <?php
-$main_url = "http://localhost/finance-system-template/";
+$main_url = "http://localhost/finance-system-demo/";
 ?>
