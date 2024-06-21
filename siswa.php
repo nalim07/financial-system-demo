@@ -18,8 +18,8 @@ include 'templates/navbar.php';
                 <li class="sidebar-item selected"> <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Siswa
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                <li class="sidebar-item"> <a class="sidebar-link" href="<?= $main_url ?>tagihan.php" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
+                    <!-- <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span class="hide-menu"> SPP
                                 </span></a>
                         </li>
@@ -38,7 +38,7 @@ include 'templates/navbar.php';
                                     Graduation
                                 </span></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
@@ -61,7 +61,7 @@ include 'templates/navbar.php';
                                 </li>
                             </ul>
                         </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <!-- Report -->
@@ -92,7 +92,7 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <br>
@@ -203,7 +203,7 @@ include 'templates/navbar.php';
                                         <td>L</td>
                                         <td>1</td>
                                         <td>
-                                            <button class="btn btn-primary">Detail</button>
+                                            <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -216,7 +216,7 @@ include 'templates/navbar.php';
                                         <td>P</td>
                                         <td>2</td>
                                         <td>
-                                            <button class="btn btn-primary">Detail</button>
+                                            <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -229,7 +229,7 @@ include 'templates/navbar.php';
                                         <td>L</td>
                                         <td>3</td>
                                         <td>
-                                            <button class="btn btn-primary">Detail</button>
+                                            <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -242,7 +242,7 @@ include 'templates/navbar.php';
                                         <td>P</td>
                                         <td>1</td>
                                         <td>
-                                            <button class="btn btn-primary">Detail</button>
+                                            <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                         </td>
                                     </tr>
                                     <!-- <tr>
@@ -255,7 +255,7 @@ include 'templates/navbar.php';
                                                 <td>P</td>
                                                 <td>2</td>
                                                 <td>
-                                                    <button class="btn btn-primary">Detail</button>
+                                                    <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -268,7 +268,7 @@ include 'templates/navbar.php';
                                                 <td>L</td>
                                                 <td>3</td>
                                                 <td>
-                                                    <button class="btn btn-primary">Detail</button>
+                                                    <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -281,7 +281,7 @@ include 'templates/navbar.php';
                                                 <td>P</td>
                                                 <td>1</td>
                                                 <td>
-                                                    <button class="btn btn-primary">Detail</button>
+                                                    <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -294,7 +294,7 @@ include 'templates/navbar.php';
                                                 <td>L</td>
                                                 <td>2</td>
                                                 <td>
-                                                    <button class="btn btn-primary">Detail</button>
+                                                    <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -307,7 +307,7 @@ include 'templates/navbar.php';
                                                 <td>P</td>
                                                 <td>3</td>
                                                 <td>
-                                                    <button class="btn btn-primary">Detail</button>
+                                                    <button class="btn btn-primary" onclick="window.location.href='<?php echo $main_url; ?>detailsiswa.php'">Detail</button>
                                                 </td>
                                             </tr> -->
                                     <!-- Add more data as needed -->

@@ -71,7 +71,7 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php"
                                 aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span
-                                    class="hide-menu">Refound</span></a>
+                                    class="hide-menu">Refund</span></a>
                         </li>
                         <!-- Report -->
                         <li class="list-divider"></li>
@@ -112,7 +112,7 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span
-                                    class="hide-menu">Refound
+                                    class="hide-menu">Refund
                                 </span></a>
                         </li>
                         <br>

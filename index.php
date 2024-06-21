@@ -15,7 +15,22 @@ include 'templates/sidebar.php';
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Mr. A!</h3>
+                <?php
+                // I'm India so my timezone is Asia/Calcutta
+                date_default_timezone_set('Asia/Calcutta');
+
+                // 24-hour format of an hour without leading zeros (0 through 23)
+                $Hour = date('G');
+
+                if ($Hour >= 5 && $Hour <= 11) {
+                    echo '<h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Mr. A!</h3>';
+                } else if ($Hour >= 12 && $Hour <= 18) {
+                    echo '<h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Afternoon Mr. A!</h3>';
+                } else if ($Hour >= 19 || $Hour <= 4) {
+                    echo '<h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Evening Mr. A!</h3>';
+                }
+                ?>
+                <!-- <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Mr. A!</h3> -->
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
@@ -27,7 +42,7 @@ include 'templates/sidebar.php';
             </div>
             <div class="col-5 align-self-center">
                 <div class="customize-input float-end">
-                    <input type="date" class="form-control bg-white border-0 custom-shadow custom-radius">
+                    <input type="date" class="form-control bg-white border-0 custom-shadow custom-radius" value="<?php echo date('Y-m-d'); ?>">
                 </div>
             </div>
         </div>
@@ -46,12 +61,12 @@ include 'templates/sidebar.php';
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h5>Akun Utama</h5>
-                                <h3 class="navy-blue">Rp57.250.000</h3>
-                                <span class="text-success">7.2%</span>
+                                <h5>Income</h5>
+                                <h3 style="color: black;">Rp 57.250.000</h3>
+                                <span class="text-success">700.000</span>
                             </div>
                             <div>
-                                <canvas id="mainAccountChart" width="100" height="100"></canvas>
+                                <canvas id="sideAccountChart" width="100" height="100"></canvas>
                             </div>
                         </div>
                     </div>
@@ -62,9 +77,9 @@ include 'templates/sidebar.php';
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h5>Akun Sampingan</h5>
-                                <h3 class="text-muted">Rp13.900.000</h3>
-                                <span class="text-danger">3.1%</span>
+                                <h5>Receivables</h5>
+                                <h3 class="">Rp 13.900.000</h3>
+                                <span class="text-danger">300.000</span>
                             </div>
                             <div>
                                 <canvas id="sideAccountChart" width="100" height="100"></canvas>
@@ -119,72 +134,84 @@ include 'templates/sidebar.php';
         <!-- End Dashboard -->
         <!-- *************************************************************** -->
         <!-- *************************************************************** -->
-        <!-- Start Sales Charts Section -->
+        <!-- Start Charts Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <h4 class="card-title">Diagram</h4>
+                            <canvas id="myChart"></canvas>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- *************************************************************** -->
         <!-- Start Location and Earnings Charts Section -->
         <div class="row">
-
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-6 col-lg-8">
                 <div class="card">
                     <div class="card-body" style="height: 370px; overflow-y: auto;">
                         <h4 class="card-title">Aktivitas Terbaru</h4>
                         <div class="mt-4 activity">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img style="width: 30px;" src="<?= $main_url ?>assets/images/visa-logo.png" alt="Visa" class="me-2">
-                                        Visa ending in 8495 <br>
-                                        <small>Expiry 06/2024</small>
+                                <?php
+                                foreach ($activities as $activity) {
+                                    echo '<li class="list-group-item d-flex justify-content-between align-items-center">';
+                                    echo '<div class="d-flex no-block align-items-center">';
+                                    echo '<div class="me-3"><img style="width: 50px;" src="assets/images/users/man-user-circle-icon.png" alt="User" class="me-2"></div>';
+                                    echo '<div>';
+                                    echo '<h5 class="text-dark mb-0 font-16 font-weight-medium">' . $activity["name"] . '</h5>';
+                                    echo '<p class="font-14" style="margin: 0;">' . $activity["tagihan"] . '</p>';
+                                    echo '<span class="font-14">' . $activity["date"] . '</span>';
+                                    echo '</div>';
+                                    echo '</div>';
+                                    echo '<span class="text-success">' . $activity["amount"] . '</span>';
+                                    echo '</li>';
+                                }
+                                ?>
+                                <!-- <li class="list-group-item d-flex justify-content-between align-items-center" style="height: 100px;">
+                                    <div class="d-flex no-block align-items-center">
+                                        <div class="me-3"><img style="width: 50px;" src="<?php echo $main_url; ?>assets/images/users/man-user-circle-icon.png" alt="User" class="me-2"></div>
+                                        <div>
+                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">John Doe</h5>
+                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
+                                        </div>
                                     </div>
                                     <span class="text-success">+ Rp25,000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="Jago" class="me-2">
-                                        Jago ending in 4731 <br>
-                                        <small>cynthia@halofigma.com</small>
+                                </li> -->
+                                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="d-flex no-block align-items-center">
+                                        <div class="me-3"><img style="width: 40px;" src="<?= $main_url ?>assets/images/BNI.svg" alt="Visa" class="me-2"></div>
+                                        <div>
+                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Bank BNI</h5>
+                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
+                                        </div>
                                     </div>
                                     <span class="text-success">+ Rp75,000</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="Apple Pay" class="me-2">
-                                        Apple Pay <br>
-                                        <small>handi@halofigma.com</small>
+                                    <div class="d-flex no-block align-items-center">
+                                        <div class="me-3"><img style="width: 40px;" src="https://minang.geoparkrun.com/wp-content/uploads/2022/11/Logo-BCA-blue-A4.png" alt="Visa" class="me-2"></div>
+                                        <div>
+                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Bank BCA</h5>
+                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
+                                        </div>
                                     </div>
                                     <span class="text-success">+ Rp20,000</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="Mastercard" class="me-2">
-                                        Mastercard ending in 4829 <br>
-                                        <small>Expiry 03/2024</small>
+                                    <div class="d-flex no-block align-items-center">
+                                        <div class="me-3"><img style="width: 40px;" src="<?= $main_url ?>assets/images/Mastercard-logo.png" alt="Visa" class="me-2"></div>
+                                        <div>
+                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Master Card</h5>
+                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
+                                        </div>
                                     </div>
+                
                                     <span class="text-success">+ Rp75,000</span>
-                                </li>
-                                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="Paypal" class="me-2">
-                                        Paypal deposit <br>
-                                        <small>ark@halofigma.com</small>
-                                    </div>
-                                    <span class="text-success">+ Rp90,000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="BCA" class="me-2">
-                                        BCA ending in 1163 <br>
-                                        <small>Expiry 03/2025</small>
-                                    </div>
-                                    <span class="text-success">+ Rp75,000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <img src="https://via.placeholder.com/20" alt="Stripe" class="me-2">
-                                        Stripe deposit <br>
-                                        <small>annisa@halofigma.com</small>
-                                    </div>
-                                    <span class="text-success">+ Rp69,000</span>
                                 </li> -->
                             </ul>
                         </div>
@@ -236,22 +263,12 @@ include 'templates/sidebar.php';
         <!-- End Location and Earnings Charts Section -->
 
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-12 col-lg-4">
 
             </div>
         </div>
         <!-- Diagram Batang -->
-        <!-- <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Pendapatan Bersih</h4>
-                                <div class="pendapatan-bersih mt-4 position-relative" style="height:294px;"></div>
-                                <ul class="list-inline text-center mt-5 mb-2">
-                                    <li class="list-inline-item text-muted fst-italic">Penjualan bulan ini</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
+
     </div>
     <!-- *************************************************************** -->
     <!-- End Sales Charts Section -->

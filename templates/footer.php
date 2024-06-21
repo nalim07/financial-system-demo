@@ -22,6 +22,7 @@
             <script src="<?php echo $main_url; ?>assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
             <!-- apps -->
             <script src="https://kit.fontawesome.com/4f7662e594.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <!-- apps -->
             <script src="<?php echo $main_url; ?>dist/js/app-style-switcher.js"></script>
             <script src="<?php echo $main_url; ?>dist/js/feather.min.js"></script>

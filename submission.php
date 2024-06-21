@@ -19,8 +19,8 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo $main_url; ?>siswa.php" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Siswa
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                <li class="sidebar-item"> <a class="sidebar-link" href="<?= $main_url ?>tagihan.php" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
+                    <!-- <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span class="hide-menu"> SPP
                                 </span></a>
                         </li>
@@ -39,7 +39,7 @@ include 'templates/navbar.php';
                                     Graduation
                                 </span></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
@@ -58,7 +58,7 @@ include 'templates/navbar.php';
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <!-- Report -->
@@ -89,7 +89,7 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <br>
@@ -151,7 +151,71 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
+                        <div class="table-responsive">
+                            <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Pengaju</th>
+                                        <th>Tanggal Pengajuan</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>2024-06-01</td>
+                                        <td>Menunggu Persetujuan</td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">Terima</a>
+                                            <a href="#" class="btn btn-primary">Detail</a>
+                                            <a href="#" class="btn btn-danger">Hapus</a>
+                                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jane Doe</td>
+                                        <td>2024-06-02</td>
+                                        <td>Menunggu Persetujuan</td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">Terima</a>
+                                            <a href="#" class="btn btn-primary">Detail</a>
+                                            <a href="#" class="btn btn-danger">Hapus</a>
+                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>James Doe</td>
+                                        <td>2024-06-03</td>
+                                        <td>Menunggu Persetujuan</td>
+                                        <td>
+                        
+                                            <a href="#" class="btn btn-success">Terima</a>
+                                            <a href="#" class="btn btn-primary">Detail</a>
+                                            <a href="#" class="btn btn-danger">Hapus</a>
+                    
+                                        </td>
+                                    </tr>
+                                    <!-- <?php foreach ($pengajuan as $key => $value) : ?>
+                                        <tr>
+                                            <td><?= $key + 1; ?></td>
+                                            <td><?= $value['nama_pengaju']; ?></td>
+                                            <td><?= $value['tanggal_pengajuan']; ?></td>
+                                            <td><?= $value['status']; ?></td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary">Detail</a>
+                                                <a href="#" class="btn btn-warning">Edit</a>
+                                                <a href="#" class="btn btn-danger">Hapus</a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?> -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

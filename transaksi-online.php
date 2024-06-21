@@ -18,8 +18,8 @@ include 'templates/navbar.php';
                 <li class="nav-small-cap"><span class="hide-menu">Master Data</span></li>
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>siswa.php" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Siswa</span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan</span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo $main_url; ?>tagihan.php" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan</span></a>
+                    <!-- <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span class="hide-menu"> SPP
                                 </span></a>
                         </li>
@@ -38,7 +38,7 @@ include 'templates/navbar.php';
                                     Graduation
                                 </span></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
@@ -57,7 +57,7 @@ include 'templates/navbar.php';
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refound</span></a>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refund</span></a>
                 </li>
                 <!-- Report -->
                 <li class="list-divider"></li>
@@ -87,7 +87,7 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <br>

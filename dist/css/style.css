@@ -18865,3 +18865,14 @@ strong {
   font-weight: normal;
   font-style: normal;
 }
+
+.chart-container {
+  width: 80%;
+  max-width: 800px;
+}
+
+canvas {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

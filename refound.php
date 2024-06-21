@@ -19,8 +19,8 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo $main_url; ?>siswa.php" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Siswa
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo $main_url; ?>tagihan.php" aria-expanded="false"><i class="fa-solid fa-money-bill-transfer"></i><span class="hide-menu">Tagihan </span></a>
+                    <!-- <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span class="hide-menu"> SPP
                                 </span></a>
                         </li>
@@ -39,7 +39,7 @@ include 'templates/navbar.php';
                                     Graduation
                                 </span></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
@@ -58,7 +58,7 @@ include 'templates/navbar.php';
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <!-- Report -->
@@ -89,7 +89,7 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="javascript:void(0)" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <br>
@@ -112,12 +112,12 @@ include 'templates/navbar.php';
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Refound</h4>
+                <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Refund</h4>
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
                             <li class="breadcrumb-item text-muted" aria-current="page">Transaksi</li>
-                            <li class="breadcrumb-item text-muted active" aria-current="page">Refound</li>
+                            <li class="breadcrumb-item text-muted active" aria-current="page">Refund</li>
                         </ol>
                     </nav>
                 </div>
@@ -144,7 +144,24 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Cek Permintaan Refund</h4>
+                                        <form action="" method="post">
+                                            <div class="form-group">
+                                                <label for="nomor_transaksi">Nomor Transaksi</label>
+                                                <input type="text" class="form-control" id="nomor_transaksi" name="nomor_transaksi" placeholder="Masukkan nomor transaksi">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">Cek</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

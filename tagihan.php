@@ -59,7 +59,7 @@ include 'templates/navbar.php';
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="refresh-cw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <!-- Report -->
@@ -90,7 +90,7 @@ include 'templates/navbar.php';
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>submission.php" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Submission
                         </span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refound
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo $main_url; ?>refound.php" aria-expanded="false"><i data-feather="rotate-ccw" class="feather-icon"></i><span class="hide-menu">Refund
                         </span></a>
                 </li>
                 <br>
@@ -148,7 +148,19 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="jenis-tagihan" class="form-label">Jenis Tagihan</label>
+                            <select class="form-select" id="jenis-tagihan">
+                                <option selected>Pilih Jenis Tagihan</option>
+                                <option value="SPP">SPP</option>
+                                <option value="Bangunan">Bangunan</option>
+                                <option value="Activity">Activity</option>
+                                <option value="Ekstur">Ekstur</option>
+                                <option value="Graduation">Graduation</option>
+                            </select>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
