@@ -135,7 +135,6 @@ include 'templates/navbar.php';
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
     <!-- Container fluid  -->
     <!-- ============================================================== -->
     <div class="container-fluid">
@@ -146,7 +145,43 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        
+                        <form action="" method="post">
+                            <div class="form-group mb-3">
+                                <label for="pembayaran">Pilihan Pembayaran</label>
+                                <select class="form-control" id="pembayaran" name="pembayaran">
+                                    <option value="">Pilih Pembayaran</option>
+                                    <option value="SPP">SPP</option>
+                                    <option value="Bangunan">Bangunan</option>
+                                    <option value="Activity">Activity</option>
+                                    <option value="Ekstur">Ekstur</option>
+                                    <option value="Graduation">Graduation</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="kelas">Kelas Siswa</label>
+                                <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukkan kelas siswa">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="jenjang">Jenjang Siswa</label>
+                                <input type="text" class="form-control" id="jenjang" name="jenjang" placeholder="Masukkan jenjang siswa">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="nama">Nama Siswa</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama siswa">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="metode">Metode Pembayaran</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="metode" id="debit" value="Debit">
+                                    <label class="form-check-label" for="debit">Debit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="metode" id="qris" value="Qris">
+                                    <label class="form-check-label" for="qris">Qris</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

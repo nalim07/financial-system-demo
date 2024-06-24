@@ -111,7 +111,7 @@ include 'templates/navbar.php';
                         <ol class="breadcrumb m-0 p-0">
                             <li class="breadcrumb-item text-muted">Master Data
                             </li>
-                            <li class="breadcrumb-item text-muted" aria-current="page">Siswa</li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="<?= $main_url ?>siswa.php" class="text-muted">Siswa</a></li>
                             <li class="breadcrumb-item text-muted active" aria-current="page">Detail Siswa</li>
                         </ol>
                     </nav>

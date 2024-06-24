@@ -148,19 +148,58 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <label for="jenis-tagihan" class="form-label">Jenis Tagihan</label>
-                            <select class="form-select" id="jenis-tagihan">
-                                <option selected>Pilih Jenis Tagihan</option>
-                                <option value="SPP">SPP</option>
-                                <option value="Bangunan">Bangunan</option>
-                                <option value="Activity">Activity</option>
-                                <option value="Ekstur">Ekstur</option>
-                                <option value="Graduation">Graduation</option>
-                            </select>
+                        <div class="table-responsive">
+                            <table id="example" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tahun Ajar</th>
+                                        <th>Unit</th>
+                                        <th>Kelas</th>
+                                        <th>SPP</th>
+                                        <th>Bangunan</th>
+                                        <th>Activity</th>
+                                        <th>Ekstur</th>
+                                        <th>Graduation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2024/2025</td>
+                                        <td>Primary</td>
+                                        <td>1</td>
+                                        <td>Rp 1.000.000</td>
+                                        <td>Rp 500.000</td>
+                                        <td>Rp 200.000</td>
+                                        <td>Rp 100.000</td>
+                                        <td>Rp 50.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2024/2025</td>
+                                        <td>Primary</td>
+                                        <td>1</td>
+                                        <td>Rp 1.000.000</td>
+                                        <td>Rp 500.000</td>
+                                        <td>Rp 200.000</td>
+                                        <td>Rp 100.000</td>
+                                        <td>Rp 50.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2024/2025</td>
+                                        <td>Primary</td>
+                                        <td>1</td>
+                                        <td>Rp 1.000.000</td>
+                                        <td>Rp 500.000</td>
+                                        <td>Rp 200.000</td>
+                                        <td>Rp 100.000</td>
+                                        <td>Rp 50.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -179,6 +218,7 @@ include 'templates/navbar.php';
     <!-- ============================================================== -->
     <!-- End Container fluid  -->
     <!-- ============================================================== -->
-    <?php include
-        'templates/footer.php';
-    ?>
+</div>
+<?php include
+    'templates/footer.php';
+?>

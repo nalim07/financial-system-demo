@@ -146,7 +146,55 @@ include 'templates/navbar.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Transaksi Baru</th>
+                                    <th>Cek Detail Pembayaran</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Transaksi 1</td>
+                                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailModal">Cek Detail</button></td>
+                                    <td>
+                                        <a href="#" class="btn btn-success">Verifikasi Admin</a>
+                                        <a href="#" class="btn btn-primary">Cetak Kwitansi</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Transaksi 2</td>
+                                    <td><a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailModal">Cek Detail</a></td>
+                                    <td>
+                                        <a href="#" class="btn btn-success">Verifikasi Admin</a>
+                                        <a href="#" class="btn btn-primary">Cetak Kwitansi</a>
+                                    </td>
+                                </tr>
+                                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Modal Detail Pembayaran -->
+                    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="detailModalLabel">Detail Pembayaran</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Isi detail pembayaran disini -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     </div>
                 </div>
             </div>

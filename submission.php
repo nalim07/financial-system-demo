@@ -116,7 +116,7 @@ include 'templates/navbar.php';
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-muted">Master Data</a>
+                            <li class="breadcrumb-item"><a href="#" class="text-muted">Master Data</a>
                             </li>
                             <li class="breadcrumb-item text-muted active" aria-current="page">Submission</li>
                         </ol>

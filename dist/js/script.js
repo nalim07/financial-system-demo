@@ -34,3 +34,5 @@ const monthlyChart = new Chart(ctx, {
         }
     }
 });
+	
+$('#example').DataTable();

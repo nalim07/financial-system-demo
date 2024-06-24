@@ -54,20 +54,20 @@ include 'templates/sidebar.php';
     <!-- Container fluid  -->
     <!-- ============================================================== -->
     <div class="container-fluid">
-        <!-- *************************************************************** -->
+        <!-- Start Dashboard -->
         <div class="row g-3 mb-3">
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h5>Income</h5>
-                                <h3 style="color: black;">Rp 57.250.000</h3>
-                                <span class="text-success">700.000</span>
+                                <h4 style="font-weight: bold; color: black;">Income</h4>
+                                <h3 style="color: black;">Rp 40.000.000</h3>
+                                <i class="fa-solid fa-arrow-up" style="color: #22ca80;"></i><span class="text-success"> 700.000</span>
                             </div>
-                            <div>
-                                <canvas id="sideAccountChart" width="100" height="100"></canvas>
+                            <div id="sideAccountChart" style="width: 150px; height: 150px;">
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -77,19 +77,17 @@ include 'templates/sidebar.php';
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h5>Receivables</h5>
-                                <h3 class="">Rp 13.900.000</h3>
-                                <span class="text-danger">300.000</span>
+                                <h4 style="font-weight: bold; color: black;">Receivables</h4>
+                                <h3 style="color: black;">Rp 10.000.000</h3>
+                                <i class="fa-solid fa-arrow-down" style="color: #ef4444;"></i><span class="text-danger"> 300.000</span>
                             </div>
-                            <div>
-                                <canvas id="sideAccountChart" width="100" height="100"></canvas>
+                            <div id="sideAccountChart2" style="width: 150px; height: 150px;">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Start Dashboard -->
         <!-- <div class="row">
                     <div class="col-sm-6 col-lg-5">
                         <div class="card border-end">
@@ -139,11 +137,8 @@ include 'templates/sidebar.php';
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="chart-container">
-                            <h4 class="card-title">Diagram</h4>
-                            <canvas id="myChart"></canvas>
-                            
-                        </div>
+                        <h4 class="card-title">Diagram</h4>
+                        <canvas id="barChart" style="width: 100%; height: 100%; box-shadow: none;"></canvas>
                     </div>
                 </div>
             </div>
@@ -153,9 +148,11 @@ include 'templates/sidebar.php';
         <div class="row">
             <div class="col-md-6 col-lg-8">
                 <div class="card">
-                    <div class="card-body" style="height: 370px; overflow-y: auto;">
-                        <h4 class="card-title">Aktivitas Terbaru</h4>
-                        <div class="mt-4 activity">
+                    <div class="card-body">
+                        <div class="card-header" style="padding-bottom: 0px;">
+                            <h4 class="card-title">Aktivitas Terbaru</h4>
+                        </div>
+                        <div class="mt-3 activity" style="height: 370px; overflow-y: auto;">
                             <ul class="list-group list-group-flush">
                                 <?php
                                 foreach ($activities as $activity) {
@@ -181,37 +178,6 @@ include 'templates/sidebar.php';
                                         </div>
                                     </div>
                                     <span class="text-success">+ Rp25,000</span>
-                                </li> -->
-                                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3"><img style="width: 40px;" src="<?= $main_url ?>assets/images/BNI.svg" alt="Visa" class="me-2"></div>
-                                        <div>
-                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Bank BNI</h5>
-                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
-                                        </div>
-                                    </div>
-                                    <span class="text-success">+ Rp75,000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3"><img style="width: 40px;" src="https://minang.geoparkrun.com/wp-content/uploads/2022/11/Logo-BCA-blue-A4.png" alt="Visa" class="me-2"></div>
-                                        <div>
-                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Bank BCA</h5>
-                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
-                                        </div>
-                                    </div>
-                                    <span class="text-success">+ Rp20,000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3"><img style="width: 40px;" src="<?= $main_url ?>assets/images/Mastercard-logo.png" alt="Visa" class="me-2"></div>
-                                        <div>
-                                            <h5 class="text-dark mb-0 font-16 font-weight-medium">Master Card</h5>
-                                            <span class="font-14">21 Juni 2024 &#8226; 08:00</span>
-                                        </div>
-                                    </div>
-                
-                                    <span class="text-success">+ Rp75,000</span>
                                 </li> -->
                             </ul>
                         </div>
@@ -268,7 +234,6 @@ include 'templates/sidebar.php';
             </div>
         </div>
         <!-- Diagram Batang -->
-
     </div>
     <!-- *************************************************************** -->
     <!-- End Sales Charts Section -->

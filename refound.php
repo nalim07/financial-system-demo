@@ -147,15 +147,15 @@ include 'templates/navbar.php';
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body p-4">
                                         <h4 class="card-title">Cek Permintaan Refund</h4>
                                         <form action="" method="post">
-                                            <div class="form-group">
-                                                <label for="nomor_transaksi">Nomor Transaksi</label>
-                                                <input type="text" class="form-control" id="nomor_transaksi" name="nomor_transaksi" placeholder="Masukkan nomor transaksi">
+                                            <div class="form-group mb-3">
+                                                <label for="nama_siswa">Nama Siswa</label>
+                                                <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" placeholder="Masukkan nama siswa">
                                             </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary">Cek</button>
+                                            <div class="form-group mb-3">
+                                                <button type="submit" class="btn btn-primary">Cari</button>
                                             </div>
                                         </form>
                                     </div>
